@@ -1,0 +1,202 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: #ffffff url('images/ep_naturalwhite.png'); /* Background pattern from Subtle Patterns */
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+}
+
+.container {
+  position: relative;
+	width: 638px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-weight: lighter;
+	font-size: 40px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.stars {
+	padding: 0;
+	font-size: 30px;
+	line-height: 60px;
+	list-style-type: none;
+}
+
+.stars li {
+	display: inline-block;
+}
+
+.stars .hidden {
+	font-size: 0;
+}
+
+.moves,
+.restart {
+	font-size: 25px;
+}
+
+.moves {
+	float: left;
+	padding-left: 30px;
+}
+
+.restart {
+	float: right;
+	padding-right: 30px;
+}
+
+
+.timer {
+  display: block;
+  width: 45px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+
+
+
+/*
+ * Styles for the Cards
+ */
+
+
+.deck {
+    width: 578px;
+    padding: 30px;
+    /*border: 5px solid gray;*/
+    background-color: #f5c6b3;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    display: inline-block;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.33);
+    text-align: center;
+    font-size: 0;
+    line-height: 125px;
+    border-radius: 10px;
+    /*border: 5px solid gray;*/
+    background-color: #cfd9df;
+    margin: 8px;
+    transition: all .5s ease;
+  	transform-style: preserve-3d;
+  	perspective: 700;
+  	vertical-align: middle;
+}
+
+.deck .card.show,
+.deck .card.match {
+    transform: rotateY(180deg);
+    font-size: 50px;
+    box-shadow: -12px 15px 20px 0 rgba(46, 61, 73, 0.33);
+}
+
+.deck .card.show {
+  background-color: #fff;
+}
+
+.deck .card.match {
+    background-color: #f5b095;
+}
+
+
+/*
+ * Styles for the congrats message
+ */
+
+#congrats {
+  display: none;
+  width: 340px;
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  margin-right: -190px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+button {
+  padding: 20px 40px;
+  background-color: #f5c6b3;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+
+/*
+ * Styles for bounce and wiggle
+ */
+
+
+
+@keyframes bounce {
+  0%, 70%, 100% {
+    transform: translate(0,0) rotateY(180deg);
+  }
+
+  35%{
+    transform: translate(0, -15px) rotateY(180deg);
+  }
+
+  85% {
+    transform: translate(0, -6px) rotateY(180deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: translate(0,0) rotateY(180deg);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate(-5px, 0) rotateY(180deg);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(5px, 0) rotateY(180deg);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+  animation-duration: 0.3s;
+}
+
+.wiggle {
+  animation-name: wiggle;
+  transform-origin: center bottom;
+  animation-duration: 0.4s;	
+}
+
+
+
+
+
+
+
+
+
