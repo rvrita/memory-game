@@ -2,6 +2,8 @@
 
 This is the README file for my Matching Game.
 
+Try it here: https://rvrita.github.io/memory-game/
+
 ## Overview
 
 The game has 16 cards.
